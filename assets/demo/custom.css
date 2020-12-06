@@ -13,3 +13,7 @@ label,
     width: 16px;
     height: 16px;
 }
+
+.form-horizontal .row {
+    margin-top: 10px;
+}
