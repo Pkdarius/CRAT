@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    $("[name='finish']").click(function() {
+$(function() {
+    $("[name='finish']").on("click", function() {
         console.log('ok');
     });
 });
