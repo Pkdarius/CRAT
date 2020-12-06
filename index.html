@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <link href="assets\css\material-dashboard.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/demo/custom.css">
 </head>
 
 <body class="">
@@ -18,436 +19,459 @@
                 <div class="col-md-8 col-12 mr-auto ml-auto">
                     <div class="wizard-container">
                         <div class="card card-wizard" data-color="blue" id="wizardProfile">
-                            <form action="" method="">
-                                <div class="card-header text-center">
-                                    <h3 class="card-title">
-                                        Cancer Risk Assessment Tool
-                                    </h3>
-                                    <h5 class="card-description">
-                                        Enter your information so we can calculate your cancer risk.
-                                    </h5>
-                                </div>
-                                <div class="wizard-navigation">
-                                    <ul class="nav nav-pills">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="#demographics" data-toggle="tab" role="tab">
-                                                Demographics
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#dietandactivity" data-toggle="tab" role="tab">
-                                                Diet and Physical Activity
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="card-body">
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" id="demographics">
-                                            <div class="row justify-content-center">
-                                                <div class="card-body">
-                                                    <form class="form-horizontal">
-                                                        <div class="row">
-                                                            <label class="col-md-3 col-form-label label-checkbox">Gender</label>
-                                                            <div class="col-sm-9 checkbox-radios">
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="gender" value="1" />
-                                                                        Male
-                                                                        <span class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="gender" value="2" />
-                                                                        Female
-                                                                        <span class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
+                            <div class="card-header text-center">
+                                <h3 class="card-title">
+                                    Cancer Risk Assessment Tool
+                                </h3>
+                                <h5 class="card-description">
+                                    Enter your information so we can calculate your cancer risk.
+                                </h5>
+                            </div>
+                            <div class="wizard-navigation">
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#demographics" data-toggle="tab" role="tab">
+                                            Demographics
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#activity" data-toggle="tab" role="tab">
+                                            Activity
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#diet" data-toggle="tab" role="tab">
+                                            Diet
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#medical" data-toggle="tab" role="tab">
+                                            Medical
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="demographics">
+                                        <div class="row justify-content-center">
+                                            <div class="card-body">
+                                                <div class="form-horizontal">
+                                                    <div class="row">
+                                                        <label class="col-md-3 col-form-label label-checkbox">Gender</label>
+                                                        <div class="col-sm-9 checkbox-radios">
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="gender" value="1" />
+                                                                    Male
+                                                                    <span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="gender" value="2" />
+                                                                    Female
+                                                                    <span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <label class="col-md-3 col-form-label label-checkbox">Marital
-                                                                Status</label>
-                                                            <div class="col-sm-9 checkbox-radios">
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="maritalStatus"
-                                                                            value="0" />Married<span class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="maritalStatus" value="1" />
-                                                                        Separated/Divorced/Windowed
-                                                                        <span class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-md-3 col-form-label label-checkbox">Marital
+                                                            Status</label>
+                                                        <div class="col-sm-9 checkbox-radios">
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="maritalStatus" value="0" />Married<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="maritalStatus"
+                                                                        value="1" />Separated/Divorced/Windowed
+                                                                    <span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <label class="col-md-3 col-form-label label-checkbox">Education</label>
-                                                            <div class="col-sm-9 checkbox-radios">
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                            <input class="form-check-input" type="radio"
-                                                                                name="education"
-                                                                                value="5" />No formal education<span class="circle">
-                                                                                <span class="check"></span>
-                                                                            </span>
-                                                                        </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                            <input class="form-check-input" type="radio"
-                                                                                name="education"
-                                                                                value="4" />Primary school<span class="circle">
-                                                                                <span class="check"></span>
-                                                                            </span>
-                                                                        </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                            <input class="form-check-input" type="radio"
-                                                                                name="education"
-                                                                                value="3" />Secondary school<span class="circle">
-                                                                                <span class="check"></span>
-                                                                            </span>
-                                                                        </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                            <input class="form-check-input" type="radio"
-                                                                                name="education"
-                                                                                value="2" />High school<span class="circle">
-                                                                                <span class="check"></span>
-                                                                            </span>
-                                                                        </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                            <input class="form-check-input" type="radio"
-                                                                                name="education"
-                                                                                value="1" />Professional education<span class="circle">
-                                                                                <span class="check"></span>
-                                                                            </span>
-                                                                        </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                            <input class="form-check-input" type="radio"
-                                                                                name="education"
-                                                                                value="0" />Unknown<span class="circle">
-                                                                                <span class="check"></span>
-                                                                            </span>
-                                                                        </label>
-                                                                </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-md-3 col-form-label label-checkbox">Education</label>
+                                                        <div class="col-sm-9 checkbox-radios">
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="education" value="5" />No formal
+                                                                    education<span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="education" value="4" />Primary
+                                                                    school<span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="education" value="3" />Secondary
+                                                                    school<span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="education" value="2" />High
+                                                                    school<span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="education" value="1" />Professional
+                                                                    education<span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="education" value="0" />Unknown<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <label class="col-md-3 col-form-label label-checkbox">Height</label>
-                                                            <div class="col-sm-9">
-                                                                <input type="number" class="form-control" id="heightInput" name="heightInput" placeholder="Height in cm" />
-                                                            </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-md-3 col-form-label label-checkbox">Height</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="number" class="form-control" id="heightInput" name="heightInput" placeholder="Height in cm" />
                                                         </div>
-                                                        <div class="row">
-                                                            <label class="col-md-3 col-form-label label-checkbox">Weight</label>
-                                                            <div class="col-sm-9">
-                                                                <input type="number" class="form-control" id="weightInput" name="weightInput" placeholder="Weight in kg" />
-                                                            </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-md-3 col-form-label label-checkbox">Weight</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="number" class="form-control" id="weightInput" name="weightInput" placeholder="Weight in kg" />
                                                         </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane" id="dietandactivity">
-                                            <div class="row justify-content-center">
-                                                <div class="card-body">
-                                                    <form class="form-horizontal">
-                                                        <div class="row">
-                                                            <label class="col-md-3 col-form-label label-checkbox">Smoking
-                                                                status</label>
-                                                            <div class="col-sm-9 checkbox-radios">
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="smokingStatus" value="0" />
-                                                                        Never smoker
-                                                                        <span class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="smokingStatus" value="1" />
-                                                                        Former smoker
-                                                                        <span class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="smokingStatus" value="2" />
-                                                                        Current smoker
-                                                                        <span class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <label class="col-md-3 col-form-label label-checkbox">Drinking
-                                                            </label>
-                                                            <div class="col-sm-9 checkbox-radios">
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="drinking" value="0" />Never
-                                                                        drinker<span class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="drinking" value="1" />
-                                                                        &le; 1 drink/week
-                                                                        <span class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="drinking" value="2" />
-                                                                        1.1 - 7 drink/week
-                                                                        <span class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="drinking" value="3" />
-                                                                        7.1 - 14 drink/week
-                                                                        <span class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="drinking" value="4" />
-                                                                        &ge; 14 drink/week
-                                                                        <span class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <label class="col-md-3 col-form-label label-checkbox">Physical
-                                                                Activity </label>
-                                                            <div class="col-sm-9 checkbox-radios">
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="physicalActivity" value="1" />Yes<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="physicalActivity" value="2" />No<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <label class="col-md-3 col-form-label label-checkbox">Family
-                                                                history of cancer </label>
-                                                            <div class="col-sm-9 checkbox-radios">
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="familyHistory" value="1" />Yes<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="familyHistory" value="2" />No<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <label class="col-md-3 col-form-label label-checkbox">Number
-                                                                of co-morbidity</label>
-                                                            <div class="col-sm-9 checkbox-radios">
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="comobidity" value="0" />0<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="comobidity" value="1" />1<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="comobidity" value="2" />2<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="comobidity" value="1" />&ge;3<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <label class="col-md-3 col-form-label label-checkbox">Red
-                                                                meat</label>
-                                                            <div class="col-sm-9 checkbox-radios">
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="redMeat" value="0" />Yes<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="redMeat" value="1" />No<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <label class="col-md-3 col-form-label label-checkbox">Tea</label>
-                                                            <div class="col-sm-9 checkbox-radios">
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="tea" value="1" />Yes<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="tea" value="0" />No<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <label class="col-md-3 col-form-label label-checkbox">Coffe
-                                                                Drinking</label>
-                                                            <div class="col-sm-9 checkbox-radios">
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="coffeDrinking" value="1" />Yes<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                                <div class="form-check form-check-radio">
-                                                                    <label class="form-check-label">
-                                                                        <input class="form-check-input" type="radio"
-                                                                            name="coffeDrinking" value="0" />No<span
-                                                                            class="circle">
-                                                                            <span class="check"></span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="mr-auto">
-                                        <input type="button" class="btn btn-previous btn-fill btn-info btn-wd" name="previous" value="Previous" />
+                                    <div class="tab-pane" id="activity">
+                                        <div class="row justify-content-center">
+                                            <div class="card-body">
+                                                <div class="form-horizontal">
+                                                    <div class="row">
+                                                        <label class="col-md-3 col-form-label label-checkbox">Smoking
+                                                            status</label>
+                                                        <div class="col-sm-9 checkbox-radios">
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="smokingStatus" value="0" />
+                                                                    Never smoker
+                                                                    <span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="smokingStatus" value="1" />
+                                                                    Former smoker
+                                                                    <span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="smokingStatus" value="2" />
+                                                                    Current smoker
+                                                                    <span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-md-3 col-form-label label-checkbox">Drinking
+                                                        </label>
+                                                        <div class="col-sm-9 checkbox-radios">
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="drinking" value="0" />Never
+                                                                    drinker<span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="drinking" value="1" />
+                                                                    &le; 1 drink/week
+                                                                    <span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="drinking" value="2" />
+                                                                    1.1 - 7 drink/week
+                                                                    <span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="drinking" value="3" />
+                                                                    7.1 - 14 drink/week
+                                                                    <span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="drinking" value="4" />
+                                                                    &ge; 14 drink/week
+                                                                    <span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-md-3 col-form-label label-checkbox">Physical
+                                                            Activity </label>
+                                                        <div class="col-sm-9 checkbox-radios">
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="physicalActivity" value="1" />Yes<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="physicalActivity" value="2" />No<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="ml-auto">
-                                        <input type="button" class="btn btn-next btn-fill btn-info btn-wd" name="next" value="Next" />
-                                        <input type="button" class="btn btn-finish btn-fill btn-info btn-wd" name="finish" value="Finish" style="display: none" />
+                                    <div class="tab-pane" id="diet">
+                                        <div class="row justify-content-center">
+                                            <div class="card-body">
+                                                <div class="form-horizontal">
+                                                    <div class="row">
+                                                        <label class="col-md-3 col-form-label label-checkbox">Red
+                                                            meat</label>
+                                                        <div class="col-sm-9 checkbox-radios">
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="redMeat" value="0" />Yes<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="redMeat" value="1" />No<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-md-3 col-form-label label-checkbox">Tea</label>
+                                                        <div class="col-sm-9 checkbox-radios">
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="tea" value="1" />Yes<span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="tea" value="0" />No<span class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-md-3 col-form-label label-checkbox">Coffe
+                                                            Drinking</label>
+                                                        <div class="col-sm-9 checkbox-radios">
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="coffeDrinking" value="1" />Yes<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="coffeDrinking" value="0" />No<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="clearfix"></div>
+                                    <div class="tab-pane" id="medical">
+                                        <div class="row justify-content-center">
+                                            <div class="card-body">
+                                                <div class="form-horizontal">
+                                                    <div class="row">
+                                                        <label class="col-md-3 col-form-label label-checkbox">Family
+                                                            history of cancer </label>
+                                                        <div class="col-sm-9 checkbox-radios">
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="familyHistory" value="1" />Yes<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="familyHistory" value="2" />No<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-md-3 col-form-label label-checkbox">Number
+                                                            of co-morbidity</label>
+                                                        <div class="col-sm-9 checkbox-radios">
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="comobidity" value="0" />0<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="comobidity" value="1" />1<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="comobidity" value="2" />2<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check form-check-radio">
+                                                                <label class="form-check-label">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="comobidity" value="1" />&ge;3<span
+                                                                        class="circle">
+                                                                        <span class="check"></span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="card-footer">
+                                <div class="mr-auto">
+                                    <input type="button" class="btn btn-previous btn-fill btn-info btn-wd" name="previous" value="Previous" />
+                                </div>
+                                <div class="ml-auto">
+                                    <input type="button" class="btn btn-next btn-fill btn-info btn-wd" name="next" value="Next" />
+                                    <input type="button" class="btn btn-finish btn-fill btn-info btn-wd" name="finish" value="Finish" style="display: none" />
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
                         </div>
                     </div>
-                    <!-- wizard container -->
                 </div>
             </div>
         </div>
@@ -485,8 +509,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
     <!-- Library for adding dinamically elements -->
     <script src="assets/js/plugins/arrive.min.js"></script>
-    <!--  Google Maps Plugin    -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script>
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Chartist JS -->
@@ -497,6 +519,7 @@
     <script src="assets/js/material-dashboard.min.js" type="text/javascript"></script>
     <!-- Material Dashboard DEMO methods, don't include it in your project! -->
     <script src="assets/demo/custom.js"></script>
+    <script src="assets/demo/calculator.js"></script>
     <script>
         $(document).ready(function() {
             $().ready(function() {

@@ -71,39 +71,39 @@ demo = {
 
     initMaterialWizard: function() {
         // Code for the Validator
-        // var $validator = $(".card-wizard form").validate({
-        //     rules: {
-        //         // firstname: {
-        //         //     required: true,
-        //         //     minlength: 3,
-        //         // },
-        //         // lastname: {
-        //         //     required: true,
-        //         //     minlength: 3,
-        //         // },
-        //         // email: {
-        //         //     required: true,
-        //         //     minlength: 3,
-        //         // },
-        //     },
+        /**var $validator = $(".card-wizard form").validate({
+            rules: {
+                // firstname: {
+                //     required: true,
+                //     minlength: 3,
+                // },
+                // lastname: {
+                //     required: true,
+                //     minlength: 3,
+                // },
+                // email: {
+                //     required: true,
+                //     minlength: 3,
+                // },
+            },
 
-        //     highlight: function(element) {
-        //         $(element)
-        //             .closest(".form-group")
-        //             .removeClass("has-success")
-        //             .addClass("has-danger");
-        //     },
-        //     success: function(element) {
-        //         $(element)
-        //             .closest(".form-group")
-        //             .removeClass("has-danger")
-        //             .addClass("has-success");
-        //     },
-        //     errorPlacement: function(error, element) {
-        //         $(element).append(error);
-        //     },
-        // });
-
+            highlight: function(element) {
+                $(element)
+                    .closest(".form-group")
+                    .removeClass("has-success")
+                    .addClass("has-danger");
+            },
+            success: function(element) {
+                $(element)
+                    .closest(".form-group")
+                    .removeClass("has-danger")
+                    .addClass("has-success");
+            },
+            errorPlacement: function(error, element) {
+                $(element).append(error);
+            },
+        });
+*/
         // Wizard Initialization
         $(".card-wizard").bootstrapWizard({
             tabClass: "nav nav-pills",
@@ -257,6 +257,9 @@ demo = {
                 vertical_level = vertical_level * 38;
             }
 
+            $navigationItemHeight = $('.nav-item').height();
+            $navigationItemWidth = $('.nav-item').width();
+
             $wizard.find(".moving-tab").css("width", step_width);
             $(".moving-tab").css({
                 transform: "translate3d(" +
@@ -265,6 +268,8 @@ demo = {
                     vertical_level +
                     "px, 0)",
                 transition: "all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1)",
+                // height: $navigationItemHeight * 1.1,
+                // width: $navigationItemWidth * 1.1
             });
         }
     },

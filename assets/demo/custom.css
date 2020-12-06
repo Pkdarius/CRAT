@@ -1,0 +1,15 @@
+.card-wizard .nav.nav-pills .nav-item .nav-link {
+    font-size: 0.695rem;
+}
+
+.form-check,
+label,
+.col-form-label {
+    font-size: 16px;
+}
+
+.form-check .form-check-label .circle,
+.form-check .form-check-label .circle .check {
+    width: 16px;
+    height: 16px;
+}
