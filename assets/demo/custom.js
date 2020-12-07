@@ -1,7 +1,7 @@
-demo = {
+const demo = {
     presentationAnimations: function() {
-        $(function() {
-            var $window = $(window),
+        $(function (events, handler) {
+            const $window = $(window),
                 isTouch = Modernizr.touch;
 
             if (isTouch) {
@@ -11,9 +11,8 @@ demo = {
             $window.on("scroll", revealAnimation);
 
             function revealAnimation() {
-                // Showed...
                 $(".add-animation:not(.animated)").each(function() {
-                    var $this = $(this),
+                    const $this = $(this),
                         offsetTop = $this.offset().top,
                         scrolled = $window.scrollTop(),
                         win_height_padded = $window.height();
@@ -21,14 +20,13 @@ demo = {
                         $this.addClass("animated");
                     }
                 });
-                // Hidden...
                 $(".add-animation.animated").each(function(index) {
-                    var $this = $(this),
-                        offsetTop = $this.offset().top;
-                    (scrolled = $window.scrollTop()),
-                    (windowHeight = $window.height());
+                    const $this = $(this);
+                    const offsetTop = $this.offset().top;
+                    const scrolled = $window.scrollTop();
+                    const windowHeight = $window.height();
 
-                    win_height_padded = windowHeight * 0.8;
+                    const win_height_padded = windowHeight * 0.8;
                     if (scrolled + win_height_padded < offsetTop) {
                         $(this).removeClass("animated");
                     }
@@ -39,92 +37,82 @@ demo = {
         });
     },
 
-    initDateTimePicker: function() {
-        $(".datetimepicker").datetimepicker({
-            icons: {
-                time: "fa fa-clock-o",
-                date: "fa fa-calendar",
-                up: "fa fa-chevron-up",
-                down: "fa fa-chevron-down",
-                previous: "fa fa-chevron-left",
-                next: "fa fa-chevron-right",
-                today: "fa fa-screenshot",
-                clear: "fa fa-trash",
-                close: "fa fa-remove",
-            },
-        });
-    },
-
-    initPickColor: function() {
-        $(".pick-class-label").click(function() {
-            var new_class = $(this).attr("new-class");
-            var old_class = $("#display-buttons").attr("data-class");
-            var display_div = $("#display-buttons");
-            if (display_div.length) {
-                var display_buttons = display_div.find(".btn");
-                display_buttons.removeClass(old_class);
-                display_buttons.addClass(new_class);
-                display_div.attr("data-class", new_class);
-            }
-        });
-    },
-
     initMaterialWizard: function() {
         // Code for the Validator
-        /**var $validator = $(".card-wizard form").validate({
+        const $validator = $(".card-wizard form").validate({
             rules: {
-                // firstname: {
-                //     required: true,
-                //     minlength: 3,
-                // },
-                // lastname: {
-                //     required: true,
-                //     minlength: 3,
-                // },
-                // email: {
-                //     required: true,
-                //     minlength: 3,
-                // },
+                gender: {
+                    required: true,
+                },
+                maritalStatus: {
+                    required: true,
+                },
+                education: {
+                    required: true,
+                },
+                height: {
+                    required: true,
+                },
+                weight: {
+                    required: true,
+                },
+                smokingStatus: {
+                    required: true,
+                },
+                drinkingStatus: {
+                    required: true,
+                },
+                physicalActivity: {
+                    required: true,
+                },
+                redMeat: {
+                    required: true,
+                },
+                tea: {
+                    required: true,
+                },
+                coffee: {
+                    required: true,
+                },
+                numOfMorbidity: {
+                    required: true,
+                },
+                familyHistory: {
+                    required: true,
+                },
             },
 
             highlight: function(element) {
-                $(element)
-                    .closest(".form-group")
-                    .removeClass("has-success")
-                    .addClass("has-danger");
             },
             success: function(element) {
-                $(element)
-                    .closest(".form-group")
-                    .removeClass("has-danger")
-                    .addClass("has-success");
             },
             errorPlacement: function(error, element) {
-                $(element).append(error);
             },
         });
-*/
         // Wizard Initialization
         $(".card-wizard").bootstrapWizard({
             tabClass: "nav nav-pills",
             nextSelector: ".btn-next",
             previousSelector: ".btn-previous",
 
-            // onNext: function(tab, navigation, index) {
-            //     var $valid = $(".card-wizard form").valid();
-            //     if (!$valid) {
-            //         $validator.focusInvalid();
-            //         return false;
-            //     }
-            // },
-
+            onNext: function(tab, navigation, index) {
+                const $valid = $(".card-wizard form").valid();
+                if (!$valid) {
+                    swal({
+                        title: 'Error!',
+                        text: "You must select or fill all required fields!",
+                        type: 'error',
+                    });
+                    return false;
+                }
+            },
             onInit: function(tab, navigation, index) {
                 //check number of tabs and fill the entire row
-                var $total = navigation.find("li").length;
-                var $wizard = navigation.closest(".card-wizard");
+                const $total = navigation.find("li").length;
+                const $wizard = navigation.closest(".card-wizard");
 
-                $first_li = navigation.find("li:first-child a").html();
-                $moving_div = $(
+                const $first_li = navigation.find("li:first-child a").html();
+                const $moving_div = $(
                     '<div class="moving-tab">' + $first_li + "</div>"
                 );
                 $(".card-wizard .wizard-navigation").append($moving_div);
@@ -134,21 +122,15 @@ demo = {
                 $(".moving-tab").css("transition", "transform 0s");
             },
 
-            // onTabClick: function(tab, navigation, index) {
-            //     var $valid = $(".card-wizard form").valid();
-
-            //     if (!$valid) {
-            //         return false;
-            //     } else {
-            //         return true;
-            //     }
-            // },
+            onTabClick: function(tab, navigation, index) {
+                return $(".card-wizard form").valid();
+            },
 
             onTabShow: function(tab, navigation, index) {
-                var $total = navigation.find("li").length;
-                var $current = index + 1;
+                const $total = navigation.find("li").length;
+                const $current = index + 1;
 
-                var $wizard = navigation.closest(".card-wizard");
+                const $wizard = navigation.closest(".card-wizard");
 
                 // If it's the last tab then hide the last button and show the finish instead
                 if ($current >= $total) {
@@ -159,7 +141,7 @@ demo = {
                     $($wizard).find(".btn-finish").hide();
                 }
 
-                button_text = navigation
+                const button_text = navigation
                     .find("li:nth-child(" + $current + ") a")
                     .html();
 
@@ -167,9 +149,9 @@ demo = {
                     $(".moving-tab").text(button_text);
                 }, 150);
 
-                var checkbox = $(".footer-checkbox");
+                const checkbox = $(".footer-checkbox");
 
-                if (!index == 0) {
+                if (index !== 0) {
                     $(checkbox).css({
                         opacity: "0",
                         visibility: "hidden",
@@ -186,31 +168,31 @@ demo = {
             },
         });
 
-        // $('[data-toggle="wizard-radio"]').click(function() {
-        //     wizard = $(this).closest(".card-wizard");
-        //     wizard.find('[data-toggle="wizard-radio"]').removeClass("active");
-        //     $(this).addClass("active");
-        //     $(wizard).find('[type="radio"]').removeAttr("checked");
-        //     $(this).find('[type="radio"]').attr("checked", "true");
-        // });
+        $('[data-toggle="wizard-radio"]').on("click", function() {
+            const wizard = $(this).closest(".card-wizard");
+            wizard.find('[data-toggle="wizard-radio"]').removeClass("active");
+            $(this).addClass("active");
+            $(wizard).find('[type="radio"]').removeAttr("checked");
+            $(this).find('[type="radio"]').attr("checked", "true");
+        });
 
-        // $('[data-toggle="wizard-checkbox"]').click(function() {
-        //     if ($(this).hasClass("active")) {
-        //         $(this).removeClass("active");
-        //         $(this).find('[type="checkbox"]').removeAttr("checked");
-        //     } else {
-        //         $(this).addClass("active");
-        //         $(this).find('[type="checkbox"]').attr("checked", "true");
-        //     }
-        // });
+        $('[data-toggle="wizard-checkbox"]').click(function() {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $(this).find('[type="checkbox"]').removeAttr("checked");
+            } else {
+                $(this).addClass("active");
+                $(this).find('[type="checkbox"]').attr("checked", "true");
+            }
+        });
 
         $(".set-full-height").css("height", "auto");
 
-        $(window).resize(function() {
+        $(window).on("resize", function() {
             $(".card-wizard").each(function() {
-                $wizard = $(this);
+                const $wizard = $(this);
 
-                index = $wizard.bootstrapWizard("currentIndex");
+                const index = $wizard.bootstrapWizard("currentIndex");
                 refreshAnimation($wizard, index);
 
                 $(".moving-tab").css({
@@ -220,15 +202,15 @@ demo = {
         });
 
         function refreshAnimation($wizard, index) {
-            $total = $wizard.find(".nav li").length;
-            $li_width = 100 / $total;
+            const $total = $wizard.find(".nav li").length;
+            let $li_width = 100 / $total;
 
-            total_steps = $wizard.find(".nav li").length;
-            move_distance = $wizard.width() / total_steps;
-            index_temp = index;
-            vertical_level = 0;
+            const total_steps = $wizard.find(".nav li").length;
+            let move_distance = $wizard.width() / total_steps;
+            let index_temp = index;
+            let vertical_level = 0;
 
-            mobile_device = $(document).width() < 600 && $total > 3;
+            const mobile_device = $(document).width() < 600 && $total > 3;
 
             if (mobile_device) {
                 move_distance = $wizard.width() / 2;
@@ -238,27 +220,22 @@ demo = {
 
             $wizard.find(".nav li").css("width", $li_width + "%");
 
-            step_width = move_distance;
+            const step_width = move_distance;
             move_distance = move_distance * index_temp;
 
-            $current = index + 1;
+            const $current = index + 1;
 
-            if ($current == 1 || (mobile_device == true && index % 2 == 0)) {
+            if ($current === 1 || (mobile_device && index % 2 === 0)) {
                 move_distance -= 8;
-            } else if (
-                $current == total_steps ||
-                (mobile_device == true && index % 2 == 1)
+            } else if ($current === total_steps ||(mobile_device && index % 2 === 1)
             ) {
                 move_distance += 8;
             }
 
             if (mobile_device) {
-                vertical_level = parseInt(index / 2);
+                vertical_level = Math.floor(index / 2);
                 vertical_level = vertical_level * 38;
             }
-
-            $navigationItemHeight = $('.nav-item').height();
-            $navigationItemWidth = $('.nav-item').width();
 
             $wizard.find(".moving-tab").css("width", step_width);
             $(".moving-tab").css({
@@ -268,8 +245,6 @@ demo = {
                     vertical_level +
                     "px, 0)",
                 transition: "all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1)",
-                // height: $navigationItemHeight * 1.1,
-                // width: $navigationItemWidth * 1.1
             });
         }
     },

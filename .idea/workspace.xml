@@ -20,14 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95833445-a5ea-4fe8-a5d6-6c7ff57d51bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CRAT.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/plugins/core.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CRAT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CRAT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/demo/calculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/demo/calculator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/core/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/core/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/demo/custom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +65,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -78,8 +76,55 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607293248432</updated>
-      <workItem from="1607293249852" duration="3811000" />
+      <workItem from="1607293249852" duration="5338000" />
+      <workItem from="1607347329663" duration="158000" />
+      <workItem from="1607347550445" duration="632000" />
+      <workItem from="1607348848718" duration="67000" />
+      <workItem from="1607348939714" duration="4731000" />
     </task>
+    <task id="LOCAL-00001" summary="using webstorm as ide">
+      <created>1607297405403</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607297405403</updated>
+    </task>
+    <task id="LOCAL-00002" summary="using webstorm as ide">
+      <created>1607297428140</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607297428140</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update library">
+      <created>1607297450333</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607297450333</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix">
+      <created>1607297460792</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607297460792</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ignore .idea folder">
+      <created>1607298279885</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607298279885</updated>
+    </task>
+    <task id="LOCAL-00006" summary="calculator add gender and maritalStatus">
+      <created>1607298888979</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607298888979</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,15 +140,18 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="752" y="283" key="FileChooserDialogImpl" timestamp="1607293705424">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="752" y="283" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607293705424" />
-    <state x="826" y="144" key="SettingsEditor" timestamp="1607294721274">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="826" y="144" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607294721274" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="using webstorm as ide" />
+    <MESSAGE value="update library" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="ignore .idea folder" />
+    <MESSAGE value="calculator add gender and maritalStatus" />
+    <option name="LAST_COMMIT_MESSAGE" value="calculator add gender and maritalStatus" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
