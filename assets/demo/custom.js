@@ -50,6 +50,9 @@ const demo = {
                 education: {
                     required: true,
                 },
+                age: {
+                    required: true,
+                },
                 height: {
                     required: true,
                 },

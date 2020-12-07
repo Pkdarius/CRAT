@@ -20,11 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95833445-a5ea-4fe8-a5d6-6c7ff57d51bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CRAT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CRAT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/demo/result.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/demo/calculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/demo/calculator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/demo/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/demo/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/demo/demo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +38,7 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -53,6 +55,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/js/core/jquery.min.js" />
@@ -80,7 +83,7 @@
       <workItem from="1607347329663" duration="158000" />
       <workItem from="1607347550445" duration="632000" />
       <workItem from="1607348848718" duration="67000" />
-      <workItem from="1607348939714" duration="4731000" />
+      <workItem from="1607348939714" duration="7934000" />
     </task>
     <task id="LOCAL-00001" summary="using webstorm as ide">
       <created>1607297405403</created>

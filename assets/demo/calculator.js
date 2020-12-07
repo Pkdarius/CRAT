@@ -2,166 +2,80 @@ $(function () {
     const urlString = window.location.href;
     const url = new URL(urlString);
     const urlParameters = url.searchParams;
-    let calculatorParameters = {
-        gender: urlParameters.get("gender"),
-        maritalStatus: urlParameters.get("maritalStatus"),
-        education: urlParameters.get("education"),
-        height: urlParameters.get("height"),
-        weight: urlParameters.get("weight"),
-        smokingStatus: urlParameters.get("smokingStatus"),
-        drinkingStatus: urlParameters.get("drinkingStatus"),
-        physicalActivity: urlParameters.get("physicalActivity"),
-        redMeat: urlParameters.get("redMeat"),
-        tea: urlParameters.get("tea"),
-        coffee: urlParameters.get("coffee"),
-        numOfMorbidity: urlParameters.get("numOfMorbidity"),
-        familyHistory: urlParameters.get("familyHistory"),
-    };
+
+    const gender = urlParameters.get("gender");
+    const maritalStatus = urlParameters.get("maritalStatus");
+    const education = urlParameters.get("education");
+    const age = parseFloat(urlParameters.get("age"));
+    const height = parseFloat(urlParameters.get("height"));
+    const weight = parseFloat(urlParameters.get("weight"));
+    const smokingStatus = urlParameters.get("smokingStatus");
+    const drinkingStatus = urlParameters.get("drinkingStatus");
+    const physicalActivity = urlParameters.get("physicalActivity");
+    const redMeat = urlParameters.get("redMeat");
+    const tea = urlParameters.get("tea");
+    const coffee = urlParameters.get("coffee");
+    const numOfMorbidity = urlParameters.get("numOfMorbidity");
+    const familyHistory = urlParameters.get("familyHistory");
 
     function selectRadio(selector) {
         $(selector).prop("checked", true);
     }
 
-    switch (calculatorParameters.gender) {
-        case "male":
-            selectRadio("input[name='gender'][value='1']");
-            break;
-        case "female":
-            selectRadio("input[name='gender'][value='0']");
-            break;
+    if (gender) {
+        selectRadio(`input[name='gender'][value='${gender}']`);
     }
 
-    switch (calculatorParameters.maritalStatus) {
-        case "married":
-            selectRadio("input[name='maritalStatus'][value='0']");
-            break;
-        case "other":
-            selectRadio("input[name='maritalStatus'][value='1']");
-            break;
+    if (maritalStatus) {
+        selectRadio(`input[name='maritalStatus'][value='${maritalStatus}']`);
     }
 
-    switch (calculatorParameters.education) {
-        case "noFormal":
-            selectRadio("input[name='education'][value='5']");
-            break;
-        case "primary":
-            selectRadio("input[name='education'][value='4']");
-            break;
-        case "secondary":
-            selectRadio("input[name='education'][value='3']");
-            break;
-        case "high":
-            selectRadio("input[name='education'][value='2']");
-            break;
-        case "professional":
-            selectRadio("input[name='education'][value='1']");
-            break;
-        case "higher":
-            selectRadio("input[name='education'][value='0']");
-            break;
-        case "unknown":
-            selectRadio("input[name='education'][value='6']");
-            break;
+    if (education) {
+        selectRadio(`input[name='education'][value='${education}']`);
     }
 
-    const height = parseFloat(calculatorParameters.height);
-    if(height) {
+    if (age) {
+        $("input[name='age']").val(age);
+    }
+
+    if (height) {
         $("input[name='height']").val(height);
     }
 
-    const weight = parseFloat(calculatorParameters.weight);
-    if(height) {
+    if (height) {
         $("input[name='weight']").val(weight);
     }
 
-    switch (calculatorParameters.smokingStatus) {
-        case "never":
-            selectRadio("input[name='smokingStatus'][value='0']");
-            break;
-        case "former":
-            selectRadio("input[name='smokingStatus'][value='1']");
-            break;
-        case "current":
-            selectRadio("input[name='smokingStatus'][value='2']");
-            break;
+    if (smokingStatus) {
+        selectRadio(`input[name='smokingStatus'][value='${smokingStatus}']`);
     }
 
-    switch (calculatorParameters.drinkingStatus) {
-        case "never":
-            selectRadio("input[name='drinkingStatus'][value='0']");
-            break;
-        case "le1":
-            selectRadio("input[name='drinkingStatus'][value='1']");
-            break;
-        case "le7":
-            selectRadio("input[name='drinkingStatus'][value='2']");
-            break;
-        case "le14":
-            selectRadio("input[name='drinkingStatus'][value='3']");
-            break;
-        case "gt14":
-            selectRadio("input[name='drinkingStatus'][value='4']");
-            break;
+    if (drinkingStatus) {
+        selectRadio(`input[name='drinkingStatus'][value='${drinkingStatus}']`);
     }
 
-    switch (calculatorParameters.physicalActivity) {
-        case "yes":
-            selectRadio("input[name='physicalActivity'][value='1']");
-            break;
-        case "no":
-            selectRadio("input[name='physicalActivity'][value='2']");
-            break;
+    if (physicalActivity) {
+        selectRadio(`input[name='physicalActivity'][value='${physicalActivity}']`);
     }
 
-    switch (calculatorParameters.redMeat) {
-        case "yes":
-            selectRadio("input[name='redMeat'][value='1']");
-            break;
-        case "no":
-            selectRadio("input[name='redMeat'][value='0']");
-            break;
+    if (redMeat) {
+        selectRadio(`input[name='redMeat'][value='${redMeat}']`);
     }
 
-    switch (calculatorParameters.tea) {
-        case "yes":
-            selectRadio("input[name='tea'][value='1']");
-            break;
-        case "no":
-            selectRadio("input[name='tea'][value='0']");
-            break;
+    if (tea) {
+        selectRadio(`input[name='tea'][value='${tea}']`);
     }
 
-    switch (calculatorParameters.coffee) {
-        case "yes":
-            selectRadio("input[name='coffee'][value='1']");
-            break;
-        case "no":
-            selectRadio("input[name='coffee'][value='0']");
-            break;
+    if (coffee) {
+        selectRadio(`input[name='coffee'][value='${coffee}']`);
     }
 
-    switch (calculatorParameters.numOfMorbidity) {
-        case "0":
-            selectRadio("input[name='numOfMorbidity'][value='0']");
-            break;
-        case "1":
-            selectRadio("input[name='numOfMorbidity'][value='1']");
-            break;
-        case "2":
-            selectRadio("input[name='numOfMorbidity'][value='2']");
-            break;
-        case "3":
-            selectRadio("input[name='numOfMorbidity'][value='3']");
-            break;
+    if (numOfMorbidity) {
+        selectRadio(`input[name='numOfMorbidity'][value='${numOfMorbidity}']`);
     }
 
-    switch (calculatorParameters.familyHistory) {
-        case "yes":
-            selectRadio("input[name='familyHistory'][value='1']");
-            break;
-        case "no":
-            selectRadio("input[name='familyHistory'][value='2']");
-            break;
+    if (familyHistory) {
+        selectRadio(`input[name='familyHistory'][value='${familyHistory}']`);
     }
 
     $("[name='finish']").on("click", function () {
@@ -174,21 +88,21 @@ $(function () {
             });
             return false;
         }
-        calculatorParameters = {
-            gender: $("input[name='gender']:checked").val(),
-            maritalStatus: $("input[name='maritalStatus']:checked").val(),
-            education: $("input[name='education']:checked").val(),
-            height: $("input[name='height']").val(),
-            weight: $("input[name='weight']").val(),
-            smokingStatus: $("input[name='smokingStatus']:checked").val(),
-            drinkingStatus: $("input[name='drinkingStatus']:checked").val(),
-            physicalActivity: $("input[name='physicalActivity']:checked").val(),
-            redMeat: $("input[name='redMeat']:checked").val(),
-            tea: $("input[name='tea']:checked").val(),
-            coffee: $("input[name='coffee']:checked").val(),
-            numOfMorbidity: $("input[name='numOfMorbidity']:checked").val(),
-            familyHistory: $("input[name='familyHistory']:checked").val(),
-        };
-        console.log(calculatorParameters);
+        const gender = $("input[name='gender']:checked").val();
+        const maritalStatus = $("input[name='maritalStatus']:checked").val();
+        const education = $("input[name='education']:checked").val();
+        const age = $("input[name='age']").val();
+        const height = $("input[name='height']").val();
+        const weight = $("input[name='weight']").val();
+        const smokingStatus = $("input[name='smokingStatus']:checked").val();
+        const drinkingStatus = $("input[name='drinkingStatus']:checked").val();
+        const physicalActivity = $("input[name='physicalActivity']:checked").val();
+        const redMeat = $("input[name='redMeat']:checked").val();
+        const tea = $("input[name='tea']:checked").val();
+        const coffee = $("input[name='coffee']:checked").val();
+        const numOfMorbidity = $("input[name='numOfMorbidity']:checked").val();
+        const familyHistory = $("input[name='familyHistory']:checked").val();
+
+        window.location.href = `./result.html?gender=${gender}&maritalStatus=${maritalStatus}&education=${education}&age=${age}&height=${height}&weight=${weight}&smokingStatus=${smokingStatus}&drinkingStatus=${drinkingStatus}&physicalActivity=${physicalActivity}&redMeat=${redMeat}&tea=${tea}&coffee=${coffee}&numOfMorbidity=${numOfMorbidity}&familyHistory=${familyHistory}`;
     });
 });
