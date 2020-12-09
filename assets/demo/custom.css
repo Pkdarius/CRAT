@@ -17,3 +17,8 @@ label,
 .form-horizontal .row {
     margin-top: 10px;
 }
+
+.form-horizontal .row .col-form-label {
+    color: #555 !important;
+    font-size: 18px !important;
+}

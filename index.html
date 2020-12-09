@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Cancer Risk Assessment Tool</title>
+    <title>Colorectal Cancer Risk Assessment Tool</title>
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
     <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
-    <link href="assets/css/material-dashboard.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/material-dashboard.min.css"/>
     <link rel="stylesheet" href="assets/demo/custom.css">
 </head>
 
@@ -21,32 +21,39 @@
                 <div class="card card-wizard" data-color="blue" id="wizardProfile">
                     <form>
                         <div class="card-header text-center">
-                            <h3 class="card-title">
-                                Cancer Risk Assessment Tool
-                            </h3>
-                            <h5 class="card-description">
+                            <div class="row">
+                                <div class="col-11"><h3 class="card-title" id="title">
+                                    Colorectal Cancer Risk Assessment Tool
+                                </h3>
+                                </div>
+                                <div class="col-1">
+                                    <img src="assets/svg/vietnam-flag.svg" alt="#">
+                                </div>
+                            </div>
+                            <h5 class="card-description" id="subtitle">
                                 Enter your information so we can calculate your cancer risk.
                             </h5>
                         </div>
                         <div class="wizard-navigation">
                             <ul class="nav nav-pills">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#demographics" data-toggle="tab" role="tab">
+                                    <a class="nav-link active" id="demographicsTab" href="#demographics"
+                                       data-toggle="tab" role="tab">
                                         Demographics
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#activity" data-toggle="tab" role="tab">
+                                    <a class="nav-link" id="activityTab" href="#activity" data-toggle="tab" role="tab">
                                         Activity
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#diet" data-toggle="tab" role="tab">
+                                    <a class="nav-link" id="dietTab" href="#diet" data-toggle="tab" role="tab">
                                         Diet
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#medical" data-toggle="tab" role="tab">
+                                    <a class="nav-link" id="medicalTab" href="#medical" data-toggle="tab" role="tab">
                                         Medical
                                     </a>
                                 </li>
@@ -59,13 +66,14 @@
                                         <div class="card-body">
                                             <div class="form-horizontal">
                                                 <div class="row">
-                                                    <label class="col-md-3 col-form-label label-checkbox">Gender</label>
+                                                    <label id="genderLabel"
+                                                           class="col-md-3 col-form-label label-checkbox">Gender</label>
                                                     <div class="col-sm-9 checkbox-radios form-group">
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
                                                                        name="gender" value="1"/>
-                                                                Male
+                                                                <div id="male">Male</div>
                                                                 <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
@@ -75,7 +83,7 @@
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
                                                                        name="gender" value="0"/>
-                                                                Female
+                                                                <div id="female">Female</div>
                                                                 <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
@@ -84,14 +92,16 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <label class="col-md-3 col-form-label label-checkbox">Marital
+                                                    <label id="marital" class="col-md-3 col-form-label label-checkbox">Marital
                                                         Status</label>
                                                     <div class="col-sm-9 checkbox-radios">
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="maritalStatus" value="0"/>Married<span
-                                                                    class="circle">
+                                                                       name="maritalStatus" value="0"/>
+                                                                <div id="married">Married</div>
+                                                                <span
+                                                                        class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -100,7 +110,8 @@
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
                                                                        name="maritalStatus"
-                                                                       value="1"/>Separated/Divorced/Windowed
+                                                                       value="1"/>
+                                                                <div id="other">Separated/Divorced/Windowed</div>
                                                                 <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
@@ -109,13 +120,17 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <label class="col-md-3 col-form-label label-checkbox">Education</label>
+                                                    <label id="education"
+                                                           class="col-md-3 col-form-label label-checkbox">Education</label>
                                                     <div class="col-sm-9 checkbox-radios">
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="education" value="5"/>No formal
-                                                                education<span class="circle">
+                                                                       name="education" value="5"/>
+                                                                <div id="noFormal">No formal
+                                                                    education
+                                                                </div>
+                                                                <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -123,8 +138,12 @@
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="education" value="4"/>Primary
-                                                                school<span class="circle">
+                                                                       name="education" value="4"/>
+                                                                <div id="primary">
+                                                                    Primary
+                                                                    school
+                                                                </div>
+                                                                <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -132,8 +151,12 @@
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="education" value="3"/>Secondary
-                                                                school<span class="circle">
+                                                                       name="education" value="3"/>
+                                                                <div id="secondary">
+                                                                    Secondary
+                                                                    school
+                                                                </div>
+                                                                <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -141,8 +164,11 @@
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="education" value="2"/>High
-                                                                school<span class="circle">
+                                                                       name="education" value="2"/>
+                                                                <div id="highSchool">High
+                                                                    school
+                                                                </div>
+                                                                <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -150,8 +176,11 @@
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="education" value="1"/>Professional
-                                                                education<span class="circle">
+                                                                       name="education" value="1"/>
+                                                                <div id="professional">Professional
+                                                                    education
+                                                                </div>
+                                                                <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -159,7 +188,11 @@
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="education" value="0"/>College or higher<span class="circle">
+                                                                       name="education" value="0"/>
+                                                                <div id="higher">College or
+                                                                    higher
+                                                                </div>
+                                                                <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -167,8 +200,10 @@
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="education" value="6"/>Unknown<span
-                                                                    class="circle">
+                                                                       name="education" value="6"/>
+                                                                <div id="unknown">Unknown</div>
+                                                                <span
+                                                                        class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -176,7 +211,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <label for="ageInput"
+                                                    <label id="age" for="ageInput"
                                                            class="col-md-3 col-form-label label-checkbox">Age</label>
                                                     <div class="col-sm-9">
                                                         <input type="number" class="form-control" id="ageInput"
@@ -184,7 +219,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <label for="heightInput"
+                                                    <label id="height" for="heightInput"
                                                            class="col-md-3 col-form-label label-checkbox">Height</label>
                                                     <div class="col-sm-9">
                                                         <input type="number" class="form-control" id="heightInput"
@@ -192,7 +227,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <label for="weightInput"
+                                                    <label id="weight" for="weightInput"
                                                            class="col-md-3 col-form-label label-checkbox">Weight</label>
                                                     <div class="col-sm-9">
                                                         <input type="number" class="form-control" id="weightInput"
@@ -208,14 +243,14 @@
                                         <div class="card-body">
                                             <div class="form-horizontal">
                                                 <div class="row">
-                                                    <label class="col-md-3 col-form-label label-checkbox">Smoking
+                                                    <label id="smoking" class="col-md-3 col-form-label label-checkbox">Smoking
                                                         status</label>
                                                     <div class="col-sm-9 checkbox-radios">
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
                                                                        name="smokingStatus" value="0"/>
-                                                                Never smoker
+                                                                <div id="neverSmoker">Never smoker</div>
                                                                 <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
@@ -225,7 +260,7 @@
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
                                                                        name="smokingStatus" value="1"/>
-                                                                Former smoker
+                                                                <div id="formerSmoker">Former smoker</div>
                                                                 <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
@@ -235,7 +270,7 @@
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
                                                                        name="smokingStatus" value="2"/>
-                                                                Current smoker
+                                                                <div id="currentSmoker">Current smoker</div>
                                                                 <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
@@ -244,14 +279,17 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <label class="col-md-3 col-form-label label-checkbox">Drinking
+                                                    <label id="drinking" class="col-md-3 col-form-label label-checkbox">Drinking
                                                     </label>
                                                     <div class="col-sm-9 checkbox-radios">
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="drinkingStatus" value="0"/>Never
-                                                                drinker<span class="circle">
+                                                                       name="drinkingStatus" value="0"/>
+                                                                <div id="neverDrinker">Never
+                                                                    drinker
+                                                                </div>
+                                                                <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -260,7 +298,7 @@
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
                                                                        name="drinkingStatus" value="1"/>
-                                                                &le; 1 drink/week
+                                                                <div id="lt1PerWeek">&le; 1 drink/week</div>
                                                                 <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
@@ -270,7 +308,7 @@
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
                                                                        name="drinkingStatus" value="2"/>
-                                                                1.1 - 7 drink/week
+                                                                <div id="lt7PerWeek">1.1 - 7 drink/week</div>
                                                                 <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
@@ -280,7 +318,7 @@
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
                                                                        name="drinkingStatus" value="3"/>
-                                                                7.1 - 14 drink/week
+                                                                <div id="lt14PerWeek">7.1 - 14 drink/week</div>
                                                                 <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
@@ -290,7 +328,7 @@
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
                                                                        name="drinkingStatus" value="4"/>
-                                                                &ge; 14 drink/week
+                                                                <div id="gt14PerWeek">&ge; 14 drink/week</div>
                                                                 <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
@@ -299,14 +337,17 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <label class="col-md-3 col-form-label label-checkbox">Physical
+                                                    <label id="physicalActivity"
+                                                           class="col-md-3 col-form-label label-checkbox">Physical
                                                         Activity </label>
                                                     <div class="col-sm-9 checkbox-radios">
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="physicalActivity" value="1"/>Yes<span
-                                                                    class="circle">
+                                                                       name="physicalActivity" value="1"/>
+                                                                <div class="yes">Yes</div>
+                                                                <span
+                                                                        class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -314,7 +355,9 @@
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="physicalActivity" value="2"/>No<span
+                                                                       name="physicalActivity" value="2"/>
+                                                                <div class="no">No</div>
+                                                                <span
                                                                     class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
@@ -331,14 +374,16 @@
                                         <div class="card-body">
                                             <div class="form-horizontal">
                                                 <div class="row">
-                                                    <label class="col-md-3 col-form-label label-checkbox">Red
+                                                    <label id="redMeat" class="col-md-3 col-form-label label-checkbox">Red
                                                         meat</label>
                                                     <div class="col-sm-9 checkbox-radios">
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="redMeat" value="1"/>Yes<span
-                                                                    class="circle">
+                                                                       name="redMeat" value="1"/>
+                                                                <div class="yes">Yes</div>
+                                                                <span
+                                                                        class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -346,7 +391,7 @@
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="redMeat" value="0"/>No<span
+                                                                       name="redMeat" value="0"/><div class="no">No</div><span
                                                                     class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
@@ -355,12 +400,14 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <label class="col-md-3 col-form-label label-checkbox">Tea</label>
+                                                    <label id="tea" class="col-md-3 col-form-label label-checkbox">Tea</label>
                                                     <div class="col-sm-9 checkbox-radios">
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="tea" value="1"/>Yes<span class="circle">
+                                                                       name="tea" value="1"/>
+                                                                <div class="yes">Yes</div>
+                                                                <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -368,7 +415,9 @@
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="tea" value="0"/>No<span class="circle">
+                                                                       name="tea" value="0"/>
+                                                                <div class="no">No</div>
+                                                                <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -376,13 +425,15 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <label class="col-md-3 col-form-label label-checkbox">Coffee</label>
+                                                    <label id="coffee" class="col-md-3 col-form-label label-checkbox">Coffee</label>
                                                     <div class="col-sm-9 checkbox-radios">
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="coffee" value="1"/>Yes<span
-                                                                    class="circle">
+                                                                       name="coffee" value="1"/>
+                                                                <div class="yes">Yes</div>
+                                                                <span
+                                                                        class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -390,8 +441,9 @@
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="coffee" value="0"/>No<span
-                                                                    class="circle">
+                                                                       name="coffee" value="0"/>
+                                                                <div class="no">No</div>
+                                                                <span class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -409,7 +461,7 @@
                                         <div class="card-body">
                                             <div class="form-horizontal">
                                                 <div class="row">
-                                                    <label class="col-md-3 col-form-label label-checkbox">Number
+                                                    <label id="comorbidity" class="col-md-3 col-form-label label-checkbox">Number
                                                         of co-morbidity</label>
                                                     <div class="col-sm-9 checkbox-radios">
                                                         <div class="form-check form-check-radio">
@@ -451,14 +503,16 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <label class="col-md-3 col-form-label label-checkbox">Family
+                                                    <label id="familyHistory" class="col-md-3 col-form-label label-checkbox">Family
                                                         history of cancer </label>
                                                     <div class="col-sm-9 checkbox-radios">
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="familyHistory" value="1"/>Yes<span
-                                                                    class="circle">
+                                                                       name="familyHistory" value="1"/>
+                                                                <div class="yes">Yes</div>
+                                                                <span
+                                                                        class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -466,8 +520,10 @@
                                                         <div class="form-check form-check-radio">
                                                             <label class="form-check-label">
                                                                 <input class="form-check-input" type="radio"
-                                                                       name="familyHistory" value="2"/>No<span
-                                                                    class="circle">
+                                                                       name="familyHistory" value="2"/>
+                                                                <div class="no">No</div>
+                                                                <span
+                                                                        class="circle">
                                                                         <span class="check"></span>
                                                                     </span>
                                                             </label>
@@ -520,6 +576,7 @@
 <script src="assets/js/plugins/arrive.min.js"></script>
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="assets/js/material-dashboard.min.js" type="text/javascript"></script>
+<script src="assets/demo/dictionary.js"></script>
 <script src="assets/demo/custom.js"></script>
 <script src="assets/demo/calculator.js"></script>
 <script>

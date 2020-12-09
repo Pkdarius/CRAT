@@ -1,5 +1,5 @@
 const demo = {
-    presentationAnimations: function() {
+    presentationAnimations: function () {
         $(function (events, handler) {
             const $window = $(window),
                 isTouch = Modernizr.touch;
@@ -11,7 +11,7 @@ const demo = {
             $window.on("scroll", revealAnimation);
 
             function revealAnimation() {
-                $(".add-animation:not(.animated)").each(function() {
+                $(".add-animation:not(.animated)").each(function () {
                     const $this = $(this),
                         offsetTop = $this.offset().top,
                         scrolled = $window.scrollTop(),
@@ -20,7 +20,7 @@ const demo = {
                         $this.addClass("animated");
                     }
                 });
-                $(".add-animation.animated").each(function(index) {
+                $(".add-animation.animated").each(function (index) {
                     const $this = $(this);
                     const offsetTop = $this.offset().top;
                     const scrolled = $window.scrollTop();
@@ -37,7 +37,7 @@ const demo = {
         });
     },
 
-    initMaterialWizard: function() {
+    initMaterialWizard: function () {
         // Code for the Validator
         const $validator = $(".card-wizard form").validate({
             rules: {
@@ -52,11 +52,13 @@ const demo = {
                 },
                 age: {
                     required: true,
+                    min: 20,
+                    max: 80
                 },
-                height: {
+                heightInput: {
                     required: true,
                 },
-                weight: {
+                weightInput: {
                     required: true,
                 },
                 smokingStatus: {
@@ -82,15 +84,35 @@ const demo = {
                 },
                 familyHistory: {
                     required: true,
-                },
+                }
             },
-
-            highlight: function(element) {
+            highlight: function (element) {
             },
-            success: function(element) {
+            success: function (element) {
             },
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
             },
+            error: function(element) {
+                console.log(element);
+            },
+            invalidHandler: function (event, validator) {
+                validator.errorList.forEach(error => {
+                    let message = "You must select or fill all required fields!";
+                    console.log(error);
+                    if(error.element.id === "ageInput") {
+                        switch (error.method) {
+                            case "max":
+                            case "min":
+                                message = "Your age must be in range 20 - 80"
+                        }
+                    }
+                    swal({
+                        title: 'Error!',
+                        text: message,
+                        type: 'error',
+                    })
+                });
+            }
         });
         // Wizard Initialization
         $(".card-wizard").bootstrapWizard({
@@ -98,18 +120,10 @@ const demo = {
             nextSelector: ".btn-next",
             previousSelector: ".btn-previous",
 
-            onNext: function(tab, navigation, index) {
-                const $valid = $(".card-wizard form").valid();
-                if (!$valid) {
-                    swal({
-                        title: 'Error!',
-                        text: "You must select or fill all required fields!",
-                        type: 'error',
-                    });
-                    return false;
-                }
+            onNext: function (tab, navigation, index) {
+                return $(".card-wizard form").valid();
             },
-            onInit: function(tab, navigation, index) {
+            onInit: function (tab, navigation, index) {
                 //check number of tabs and fill the entire row
                 const $total = navigation.find("li").length;
                 const $wizard = navigation.closest(".card-wizard");
@@ -125,11 +139,11 @@ const demo = {
                 $(".moving-tab").css("transition", "transform 0s");
             },
 
-            onTabClick: function(tab, navigation, index) {
+            onTabClick: function (tab, navigation, index) {
                 return $(".card-wizard form").valid();
             },
 
-            onTabShow: function(tab, navigation, index) {
+            onTabShow: function (tab, navigation, index) {
                 const $total = navigation.find("li").length;
                 const $current = index + 1;
 
@@ -148,7 +162,7 @@ const demo = {
                     .find("li:nth-child(" + $current + ") a")
                     .html();
 
-                setTimeout(function() {
+                setTimeout(function () {
                     $(".moving-tab").text(button_text);
                 }, 150);
 
@@ -171,7 +185,7 @@ const demo = {
             },
         });
 
-        $('[data-toggle="wizard-radio"]').on("click", function() {
+        $('[data-toggle="wizard-radio"]').on("click", function () {
             const wizard = $(this).closest(".card-wizard");
             wizard.find('[data-toggle="wizard-radio"]').removeClass("active");
             $(this).addClass("active");
@@ -179,7 +193,7 @@ const demo = {
             $(this).find('[type="radio"]').attr("checked", "true");
         });
 
-        $('[data-toggle="wizard-checkbox"]').click(function() {
+        $('[data-toggle="wizard-checkbox"]').click(function () {
             if ($(this).hasClass("active")) {
                 $(this).removeClass("active");
                 $(this).find('[type="checkbox"]').removeAttr("checked");
@@ -191,8 +205,8 @@ const demo = {
 
         $(".set-full-height").css("height", "auto");
 
-        $(window).on("resize", function() {
-            $(".card-wizard").each(function() {
+        $(window).on("resize", function () {
+            $(".card-wizard").each(function () {
                 const $wizard = $(this);
 
                 const index = $wizard.bootstrapWizard("currentIndex");
@@ -230,7 +244,7 @@ const demo = {
 
             if ($current === 1 || (mobile_device && index % 2 === 0)) {
                 move_distance -= 8;
-            } else if ($current === total_steps ||(mobile_device && index % 2 === 1)
+            } else if ($current === total_steps || (mobile_device && index % 2 === 1)
             ) {
                 move_distance += 8;
             }

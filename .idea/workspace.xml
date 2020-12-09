@@ -20,11 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95833445-a5ea-4fe8-a5d6-6c7ff57d51bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/demo/ChartUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/plugins/Chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/demo/dictionary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/united-states-of-america-flag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/vietnam-flag.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CRAT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CRAT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/demo/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/demo/result.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/demo/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/demo/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +56,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -65,7 +70,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -83,7 +88,8 @@
       <workItem from="1607348848718" duration="67000" />
       <workItem from="1607348939714" duration="8445000" />
       <workItem from="1607384824185" duration="653000" />
-      <workItem from="1607431844942" duration="3026000" />
+      <workItem from="1607431844942" duration="3621000" />
+      <workItem from="1607518052772" duration="12485000" />
     </task>
     <task id="LOCAL-00001" summary="using webstorm as ide">
       <created>1607297405403</created>
@@ -146,6 +152,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="using webstorm as ide" />
     <MESSAGE value="update library" />
     <MESSAGE value="fix" />
