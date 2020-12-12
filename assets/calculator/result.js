@@ -15,11 +15,18 @@ $(function () {
     const redMeat = urlParameters.get("redMeat");
     const tea = urlParameters.get("tea");
     const coffee = urlParameters.get("coffee");
-    const numOfMorbidity = urlParameters.get("numOfMorbidity");
+    const morbidity = urlParameters.get("morbidity");
     const familyHistory = urlParameters.get("familyHistory");
+    const language = urlParameters.get("language");
 
-    $('#recalculate').attr('href', `./index.html?gender=${gender}&maritalStatus=${maritalStatus}&education=${education}&age=${age}&height=${height}&weight=${weight}&smokingStatus=${smokingStatus}&drinkingStatus=${drinkingStatus}&physicalActivity=${physicalActivity}&redMeat=${redMeat}&tea=${tea}&coffee=${coffee}&numOfMorbidity=${numOfMorbidity}&familyHistory=${familyHistory}`)
-
+    $('#reset').attr('href', `./index.html?language=${language}`);
+    $('#reset').text(dictionary.reset);
+    $('#recalculate').attr('href', `./index.html?gender=${gender}&maritalStatus=${maritalStatus}&education=${education}&age=${age}&height=${height}&weight=${weight}&smokingStatus=${smokingStatus}&drinkingStatus=${drinkingStatus}&physicalActivity=${physicalActivity}&redMeat=${redMeat}&tea=${tea}&coffee=${coffee}&morbidity=${morbidity}&familyHistory=${familyHistory}&language=${language}`)
+    $('#recalculate').text(dictionary.recalculate);
+    let numOfMorbidity = morbidity.replaceAll("0", "").length;
+    if (numOfMorbidity > 3) {
+        numOfMorbidity = 3
+    }
     const bmi = weight / ((height / 100) * (height / 100));
     const sigma = 0.1004906 - 0.0031462 * age + 0.1225548 * gender
         + 0.0291978 * maritalStatus - 0.0375267 * education + 0.026224 * bmi
@@ -28,7 +35,7 @@ $(function () {
         + 0.4353487 * numOfMorbidity - 0.7580442 * redMeat
         - 0.1374505 * tea - 0.2713213 * coffee;
     const result = Math.round(100 / (1 + Math.exp(-sigma)));
-    $('#result-text').text(result + '%');
+    $('#result-text').text(dictionary.resultText + result + '%');
     const config = {
         type: 'pie',
         data: {

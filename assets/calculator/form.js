@@ -15,8 +15,9 @@ $(function () {
     const redMeat = urlParameters.get("redMeat");
     const tea = urlParameters.get("tea");
     const coffee = urlParameters.get("coffee");
-    const numOfMorbidity = urlParameters.get("numOfMorbidity");
     const familyHistory = urlParameters.get("familyHistory");
+    const morbidity = urlParameters.get("morbidity");
+    const language = urlParameters.get("language");
 
     function selectRadio(selector) {
         $(selector).prop("checked", true);
@@ -70,12 +71,15 @@ $(function () {
         selectRadio(`input[name='coffee'][value='${coffee}']`);
     }
 
-    if (numOfMorbidity) {
-        selectRadio(`input[name='numOfMorbidity'][value='${numOfMorbidity}']`);
-    }
-
     if (familyHistory) {
         selectRadio(`input[name='familyHistory'][value='${familyHistory}']`);
+    }
+
+    if (morbidity) {
+        const allDeceases = $("input:checkbox");
+        for(let i = 0; i < morbidity.length; i++) {
+            allDeceases[i].checked = morbidity[i] === "1";
+        }
     }
 
     $("[name='finish']").on("click", function () {
@@ -100,9 +104,23 @@ $(function () {
         const redMeat = $("input[name='redMeat']:checked").val();
         const tea = $("input[name='tea']:checked").val();
         const coffee = $("input[name='coffee']:checked").val();
-        const numOfMorbidity = $("input[name='numOfMorbidity']:checked").val();
         const familyHistory = $("input[name='familyHistory']:checked").val();
-
-        window.location.href = `./result.html?gender=${gender}&maritalStatus=${maritalStatus}&education=${education}&age=${age}&height=${height}&weight=${weight}&smokingStatus=${smokingStatus}&drinkingStatus=${drinkingStatus}&physicalActivity=${physicalActivity}&redMeat=${redMeat}&tea=${tea}&coffee=${coffee}&numOfMorbidity=${numOfMorbidity}&familyHistory=${familyHistory}`;
+        const allDeceases = $("input:checkbox");
+        const checkedDeceases = $("input:checkbox:checked");
+        let morbidity = "";
+        for(let i = 0; i < allDeceases.length; i++) {
+            let flag = false;
+            for (let j = 0; j < checkedDeceases.length; j++) {
+                if(checkedDeceases[j] === allDeceases[i]) {
+                    flag = true;
+                }
+            }
+            if(flag) {
+                morbidity += "1";
+            } else {
+                morbidity += "0";
+            }
+        }
+        window.location.href = `./result.html?gender=${gender}&maritalStatus=${maritalStatus}&education=${education}&age=${age}&height=${height}&weight=${weight}&smokingStatus=${smokingStatus}&drinkingStatus=${drinkingStatus}&physicalActivity=${physicalActivity}&redMeat=${redMeat}&tea=${tea}&coffee=${coffee}&familyHistory=${familyHistory}&morbidity=${morbidity}&language=${language}`;
     });
 });

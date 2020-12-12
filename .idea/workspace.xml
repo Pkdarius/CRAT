@@ -20,15 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95833445-a5ea-4fe8-a5d6-6c7ff57d51bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/demo/dictionary.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/svg/united-states-of-america-flag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/svg/vietnam-flag.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CRAT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CRAT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/calculator/i18n-form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/calculator/i18n-result.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/calculator/i18n.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/calculator/validator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/demo/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/demo/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/demo/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/demo/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/ChartUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calculator/ChartUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/calculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calculator/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calculator/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/dictionary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/jquery.sharrre.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/demo/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calculator/result.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/result.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +97,8 @@
       <workItem from="1607384824185" duration="653000" />
       <workItem from="1607431844942" duration="3621000" />
       <workItem from="1607518052772" duration="12485000" />
+      <workItem from="1607605172462" duration="6924000" />
+      <workItem from="1607782030624" duration="3728000" />
     </task>
     <task id="LOCAL-00001" summary="using webstorm as ide">
       <created>1607297405403</created>
