@@ -17,7 +17,7 @@ $(function () {
     const coffee = urlParameters.get("coffee");
     const familyHistory = urlParameters.get("familyHistory");
     const morbidity = urlParameters.get("morbidity");
-    const language = urlParameters.get("language");
+    const language = urlParameters.get("language") ? "vi" : "en";
 
     function selectRadio(selector) {
         $(selector).prop("checked", true);
@@ -76,8 +76,8 @@ $(function () {
     }
 
     if (morbidity) {
-        const allDeceases = $("input:checkbox");
-        for(let i = 0; i < morbidity.length; i++) {
+        const allDeceases = $("input.form-check-input:checkbox");
+        for (let i = 0; i < morbidity.length; i++) {
             allDeceases[i].checked = morbidity[i] === "1";
         }
     }
@@ -105,17 +105,17 @@ $(function () {
         const tea = $("input[name='tea']:checked").val();
         const coffee = $("input[name='coffee']:checked").val();
         const familyHistory = $("input[name='familyHistory']:checked").val();
-        const allDeceases = $("input:checkbox");
-        const checkedDeceases = $("input:checkbox:checked");
+        const allDeceases = $("input.form-check-input:checkbox");
+        const checkedDeceases = $("input.form-check-input:checkbox:checked");
         let morbidity = "";
-        for(let i = 0; i < allDeceases.length; i++) {
+        for (let i = 0; i < allDeceases.length; i++) {
             let flag = false;
             for (let j = 0; j < checkedDeceases.length; j++) {
-                if(checkedDeceases[j] === allDeceases[i]) {
+                if (checkedDeceases[j] === allDeceases[i]) {
                     flag = true;
                 }
             }
-            if(flag) {
+            if (flag) {
                 morbidity += "1";
             } else {
                 morbidity += "0";

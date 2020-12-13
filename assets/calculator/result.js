@@ -17,7 +17,7 @@ $(function () {
     const coffee = urlParameters.get("coffee");
     const morbidity = urlParameters.get("morbidity");
     const familyHistory = urlParameters.get("familyHistory");
-    const language = urlParameters.get("language");
+    const language = urlParameters.get("language") ? "vi" : "en";
 
     $('#reset').attr('href', `./index.html?language=${language}`);
     $('#reset').text(dictionary.reset);

@@ -1,3 +1,6 @@
+
+const languageElement = $('#language');
+console.log(languageElement.prop('checked'))
 const vietnameseDictionary = {
     title: "CÔNG CỤ TỰ ĐÁNH GIÁ NGUY CƠ<br/>UNG THƯ ĐẠI TRỰC TRÀNG",
     subtitle: "Đánh giá nguy cơ mắc ung thư đại trực tràng dựa trên các yếu tố nhân khẩu học và hành vi lối sống.<br/>Thời gian để hoàn thành tự đánh giá: 5 phút.",
@@ -165,36 +168,34 @@ const englishDictionary = {
     resultText: "Your chance of getting cancer is "
 }
 
-const nationFlag = $('#nationFlag');
+languageElement.on('click', () => {
+    const checked = languageElement.prop('checked');
+    const currentHref = window.location.href;
+    if (currentHref.includes("language=en")) {
+        if (checked) {
+            window.location.href = currentHref.replace("language=en", "language=vi");
+        } else {
+        }
+    } else if (currentHref.includes("language=vi")) {
+        if (checked) {
+        } else {
+            window.location.href = currentHref.replace("language=vi", "language=en");
+        }
+    } else {
+        if (checked) {
+            window.location.href = currentHref + (currentHref.includes("?") ? "&" : "?") + "language=vi";
+        } else {
+            window.location.href = currentHref + (currentHref.includes("?") ? "&" : "?") + "language=en";
+        }
+    }
+});
+
 let dictionary;
 let language = new URL(window.location.href).searchParams.get("language");
-if(language === "en") {
+if (language === "en") {
     dictionary = englishDictionary;
-    nationFlag.attr("src", "assets/svg/vietnam-flag.svg");
-    nationFlag.on("click", () => {
-        window.location.href = window.location.href.replace("language=en", "language=vi");
-    });
-} else if (language === "vi") {
-    dictionary = vietnameseDictionary;
-    nationFlag.attr("src", "assets/svg/united-states-of-america-flag.svg");
-    nationFlag.on("click", () => {
-        window.location.href = window.location.href.replace("language=vi", "language=en");
-    });
-} else if (language === null) {
-    dictionary = vietnameseDictionary;
-    nationFlag.attr("src", "assets/svg/united-states-of-america-flag.svg");
-    nationFlag.on("click", () => {
-        const haveParameter = window.location.href.includes("?");
-        if (!haveParameter) {
-            window.location.href = window.location.href + "?language=en";
-        } else {
-            window.location.href = window.location.href + "&language=en";
-        }
-    });
+    languageElement.prop('checked', false);
 } else {
     dictionary = vietnameseDictionary;
-    nationFlag.attr("src", "assets/svg/united-states-of-america-flag.svg");
-    nationFlag.on("click", () => {
-        window.location.href = window.location.href.replace(/language=[a-zA-Z0-9]*/, "language=en");
-    });
+    languageElement.prop('checked', true);
 }
