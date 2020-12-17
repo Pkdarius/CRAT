@@ -46,7 +46,8 @@ $(function () {
     $('#ageInput').attr("placeholder", dictionary.ageHelp);
     $('#heightInput').attr("placeholder", dictionary.heightHelp);
     $('#weightInput').attr("placeholder", dictionary.weightHelp);
-
+    $('#physicalActivityHelp').text(dictionary.physicalActivityHelp);
+    $('#drinkingHelp').html(dictionary.drinkingHelp);
     $('#previous').attr("value", dictionary.previous);
     $('#next').attr("value", dictionary.next);
     $('#finish').attr("value", dictionary.finish);
