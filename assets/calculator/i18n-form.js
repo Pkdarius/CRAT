@@ -9,6 +9,7 @@ $(function () {
     $('#male').text(dictionary.male);
     $('#female').text(dictionary.female);
     $('#marital').text(dictionary.marital);
+    $('#single').text(dictionary.single);
     $('#married').text(dictionary.married);
     $('#other').text(dictionary.other);
     $('#education').text(dictionary.education);
