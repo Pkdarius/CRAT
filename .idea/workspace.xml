@@ -25,6 +25,8 @@
     <list default="true" id="95833445-a5ea-4fe8-a5d6-6c7ff57d51bf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/calculator/i18n-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calculator/i18n-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/calculator/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calculator/i18n.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +93,7 @@
       <workItem from="1607806294154" duration="277000" />
       <workItem from="1607821420712" duration="8778000" />
       <workItem from="1608130370689" duration="1011000" />
-      <workItem from="1608210278310" duration="3904000" />
+      <workItem from="1608210278310" duration="4257000" />
     </task>
     <task id="LOCAL-00001" summary="using webstorm as ide">
       <created>1607297405403</created>

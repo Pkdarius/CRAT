@@ -86,9 +86,9 @@ const vietnameseDictionary = {
     errorTitle: "Lỗi!",
     validatorError: "Bạn phải chọn tất cả các trường được yêu cầu!",
     ageRangeError: "Tuổi của bạn phải trong khoảng 20 - 80!",
-    reset: "Tính lại với thông tin mới",
+    reset: "Làm lại",
     recalculate: "Chỉnh sửa lại thông tin đã điền",
-    resultText: "Bạn có tỉ lệ mắc ung thư là ",
+    resultText: "Bạn có nguy cơ mắc ung thư là ",
     quote1: "Công thức ước tính nguy cơ polyp/ung thư đại trực tràng bạn vừa sử dụng được xây\n" +
         "dựng dựa trên kết quả của nghiên cứu Polyp và Ung thư đại trực tràng tại Việt Nam\n" +
         "(VinCAPR). Kết quả nguy cơ ước tính chỉ có tính chất tham khảo. Nếu bạn có bất cứ\n" +
