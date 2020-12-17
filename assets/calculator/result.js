@@ -28,8 +28,18 @@ $(function () {
         numOfMorbidity = 3
     }
     const bmi = weight / ((height / 100) * (height / 100));
+    let bmiOption;
+    if(bmi < 18.5) {
+        bmiOption = 1;
+    } else if(bmi < 22.9) {
+        bmiOption = 0;
+    } else if(bmi < 24.9) {
+        bmiOption = 2;
+    } else {
+        bmiOption = 3;
+    }
     const sigma = 0.1004906 - 0.0031462 * age + 0.1225548 * gender
-        + 0.0291978 * maritalStatus - 0.0375267 * education + 0.026224 * bmi
+        + 0.0291978 * maritalStatus - 0.0375267 * education + 0.026224 * bmiOption
         + 0.0406323 * smokingStatus + 0.1206483 * drinkingStatus
         + 0.1201688 * physicalActivity - 0.0772327 * familyHistory
         + 0.4353487 * numOfMorbidity - 0.7580442 * redMeat
