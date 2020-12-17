@@ -17,7 +17,7 @@ $(function () {
     const coffee = urlParameters.get("coffee");
     const familyHistory = urlParameters.get("familyHistory");
     const morbidity = urlParameters.get("morbidity");
-    const language = urlParameters.get("language") ? "vi" : "en";
+    const language = urlParameters.get("language") === "en" ? "en" : "vi";
 
     function selectRadio(selector) {
         $(selector).prop("checked", true);

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -22,8 +25,11 @@
     <list default="true" id="95833445-a5ea-4fe8-a5d6-6c7ff57d51bf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/calculator/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calculator/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/calculator/i18n-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calculator/i18n-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/calculator/i18n-result.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calculator/i18n-result.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/calculator/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calculator/i18n.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/calculator/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calculator/result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/calculator/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calculator/validator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/result.html" afterDir="false" />
     </list>
@@ -67,7 +73,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="liveEdit" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -90,7 +96,9 @@
       <workItem from="1607605172462" duration="6924000" />
       <workItem from="1607782030624" duration="4592000" />
       <workItem from="1607806294154" duration="277000" />
-      <workItem from="1607821420712" duration="8535000" />
+      <workItem from="1607821420712" duration="8778000" />
+      <workItem from="1608130370689" duration="1011000" />
+      <workItem from="1608210278310" duration="3672000" />
     </task>
     <task id="LOCAL-00001" summary="using webstorm as ide">
       <created>1607297405403</created>

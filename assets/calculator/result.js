@@ -17,7 +17,7 @@ $(function () {
     const coffee = urlParameters.get("coffee");
     const morbidity = urlParameters.get("morbidity");
     const familyHistory = urlParameters.get("familyHistory");
-    const language = urlParameters.get("language") ? "vi" : "en";
+    const language = urlParameters.get("language") === "en" ? "en" : "vi";
 
     $('#reset').attr('href', `./index.html?language=${language}`);
     $('#reset').text(dictionary.reset);
@@ -40,9 +40,6 @@ $(function () {
         type: 'pie',
         data: {
             datasets: [{
-                labels: [
-                    'risk of cancer', 'abc'
-                ],
                 data: [
                     result, 100 - result
                 ],
@@ -50,7 +47,10 @@ $(function () {
                     window.chartColors.red,
                     window.chartColors.blue,
                 ]
-            }]
+            }],
+            labels: [
+                'risk of cancer', ''
+            ],
         },
         options: {
             responsive: true,

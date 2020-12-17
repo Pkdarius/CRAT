@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
     const $validator = $(".card-wizard form").validate({
         rules: {
             gender: {
@@ -12,14 +12,21 @@ $(function () {
             },
             age: {
                 required: true,
-                min: 20,
-                max: 80
+                min: 40,
+                max: 100,
+                number: true
             },
             height: {
                 required: true,
+                number: true,
+                min: 50,
+                max: 210
             },
             weight: {
                 required: true,
+                number: true,
+                min: 30,
+                max: 150
             },
             smokingStatus: {
                 required: true,
@@ -43,30 +50,40 @@ $(function () {
                 required: true,
             }
         },
-        highlight: function (element) {
-        },
-        success: function (element) {
-        },
-        errorPlacement: function (error, element) {
-        },
+        highlight: function(element) {},
+        success: function(element) {},
+        errorPlacement: function(error, element) {},
         error: function(element) {
             console.log(element);
         },
-        invalidHandler: function (event, validator) {
-            console.log(validator);
+        invalidHandler: function(event, validator) {
             validator.errorList.forEach(error => {
                 let message = dictionary.validatorError;
-                if(error.element.id === "ageInput") {
+                console.log(error)
+                if (error.element.id === "ageInput") {
                     if (error.method === "max" || error.method === "min") {
-                        message = dictionary.ageRangeError
-
+                        message = dictionary.ageValueError;
+                    } else if (error.method === "number") {
+                        message = dictionary.ageFormatError;
+                    }
+                } else if (error.element.id === "heightInput") {
+                    if (error.method === "max" || error.method === "min") {
+                        message = dictionary.heightValueError;
+                    } else if (error.method === "number") {
+                        message = dictionary.heightFormatError;
+                    }
+                } else  if (error.element.id === "weightInput") {
+                    if (error.method === "max" || error.method === "min") {
+                        message = dictionary.weightValueError;
+                    } else if (error.method === "number") {
+                        message = dictionary.weightFormatError;
                     }
                 }
                 swal({
                     title: dictionary.errorTitle,
                     text: message,
                     type: 'error',
-                })
+                });
             });
         }
     });
@@ -76,10 +93,10 @@ $(function () {
         nextSelector: ".btn-next",
         previousSelector: ".btn-previous",
 
-        onNext: function (tab, navigation, index) {
+        onNext: function(tab, navigation, index) {
             return $(".card-wizard form").valid();
         },
-        onInit: function (tab, navigation, index) {
+        onInit: function(tab, navigation, index) {
             //check number of tabs and fill the entire row
             const $total = navigation.find("li").length;
             const $wizard = navigation.closest(".card-wizard");
@@ -95,11 +112,11 @@ $(function () {
             $(".moving-tab").css("transition", "transform 0s");
         },
 
-        onTabClick: function (tab, navigation, index) {
+        onTabClick: function(tab, navigation, index) {
             return $(".card-wizard form").valid();
         },
 
-        onTabShow: function (tab, navigation, index) {
+        onTabShow: function(tab, navigation, index) {
             const $total = navigation.find("li").length;
             const $current = index + 1;
 
@@ -118,7 +135,7 @@ $(function () {
                 .find("li:nth-child(" + $current + ") a")
                 .html();
 
-            setTimeout(function () {
+            setTimeout(function() {
                 $(".moving-tab").text(button_text);
             }, 150);
 
@@ -141,7 +158,7 @@ $(function () {
         },
     });
 
-    $('[data-toggle="wizard-radio"]').on("click", function () {
+    $('[data-toggle="wizard-radio"]').on("click", function() {
         const wizard = $(this).closest(".card-wizard");
         wizard.find(`[data-toggle="wizard-radio"]`).removeClass("active");
         $(this).addClass("active");
@@ -149,7 +166,7 @@ $(function () {
         $(this).find(`[type="radio"]`).attr("checked", "true");
     });
 
-    $('[data-toggle="wizard-checkbox"]').click(function () {
+    $('[data-toggle="wizard-checkbox"]').click(function() {
         if ($(this).hasClass("active")) {
             $(this).removeClass("active");
             $(this).find('[type="checkbox"]').removeAttr("checked");
@@ -161,8 +178,8 @@ $(function () {
 
     $(".set-full-height").css("height", "auto");
 
-    $(window).on("resize", function () {
-        $(".card-wizard").each(function () {
+    $(window).on("resize", function() {
+        $(".card-wizard").each(function() {
             const $wizard = $(this);
 
             const index = $wizard.bootstrapWizard("currentIndex");
@@ -200,8 +217,7 @@ $(function () {
 
         if ($current === 1 || (mobile_device && index % 2 === 0)) {
             move_distance -= 8;
-        } else if ($current === total_steps || (mobile_device && index % 2 === 1)
-        ) {
+        } else if ($current === total_steps || (mobile_device && index % 2 === 1)) {
             move_distance += 8;
         }
 
